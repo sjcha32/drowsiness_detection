@@ -1,0 +1,89 @@
+<header>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Nanum+Myeongjo:wght@400;800&family=Noto+Serif+KR:wght@300&display=swap" rel="stylesheet">
+ </header>
+ 
+ <head>
+    <style type="text/css">
+        body {
+            background: #c5d3e7;
+            padding: 3em;
+        }
+        h1 {
+            margin-top: 100;
+            position: relative;
+            text-align: center;
+            color: #353535;
+            font-size: 60px;
+            font-family:'Gugi', cursive;
+        }
+      
+        p {
+            font-family: 'Noto Serif KR', serif;
+            font-weight: 300;
+            text-align: center;
+            font-size: 20px;
+            color: #676767;
+        }
+
+        .button {
+            position: relative;
+            border: 2px solid black;
+            width: 200px;
+            height: 50px;
+            line-height: 3;
+            text-align: center;
+            cursor: pointer;
+            margin: 1.5em auto;
+            overflow: hidden;
+            
+            span {
+                display: block;
+                position: absolute;
+                animation-fill-mode: backwards;
+                transition: opacity 0.38s ease-in-out, transform 0.38s;
+                left: 0;
+                right: 0;
+            }
+            
+            .button-title {
+                opacity: 1;
+            }
+        }
+
+        .button:hover {
+            .button-title {
+                opacity: 0;
+            }
+        }
+
+        .button.horizontal {
+            .button-title {
+                transform: translate3d(0,0,0);
+            }
+        }
+
+        .button.horizontal:hover {
+            .button-title {
+                transform: translate3d(-100%,0,0);
+            }
+        }
+    </style>
+</head>
+
+
+<h1> Brain </h1>
+<p>졸음을 깨고 싶은 방법을 선택하세요.</p>
+
+<div class="button horizontal" onclick="location.href='sound.html'">
+	<span class="button-title animated">소리</span>
+</div>
+<div class="button horizontal" onclick="location.href='vibration.html'">
+	<span class="button-title animated">진동</span>
+</div>
+<div class="button horizontal">
+	<span class="button-title animated" onclick="location.href='watch_vibration.html'">워치(진동)</span>
+</div>
+<div class="button horizontal">
+	<span class="button-title animated" onclick="location.href='all.html'">다</span>
+</div>
